@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>poetry-discovery | HOME</title>
+    <link rel="stylesheet" href="/src/css/style.css">
+    <script type="module" src="/src/js/main.js"></script>
+    <script type="module" src="/src/js/home.js"></script>
+  </head>
+  <body>
+    <header class="divider" id="main-header"> </header>
+    <section class="search-bar">
+      <form id="poem-search">
+        <input
+          type="text"
+          placeholder="Search poem by title…"
+          aria-label="Search poem"
+          required
+        />
+        <button type="submit">Search</button>
+      </form>
+    </section>
+    <main class="content">
+      <section class="r-poem"></section>
+      <section class="comments-section">
+        <div class="comments"></div>
+      </section>
+    </main>
+    <footer id="main-footer"></footer>
+  </body>
+</html>
