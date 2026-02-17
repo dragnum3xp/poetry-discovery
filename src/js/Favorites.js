@@ -12,11 +12,14 @@ function renderFavorites() {
   }
 
   list.innerHTML = favorites.map(poem => `
-    <li>
-        <a href="/index.html?title=${encodeURIComponent(poem.title)}" class="favorite-link">
-            <strong>${poem.title}</strong> — ${poem.author}
-        </a>
-        <button data-title="${poem.title}" class="remove-btn">Remove</button>
+    <li class="favorite-item">
+      <a href="/?title=${encodeURIComponent(poem.title)}">
+        <strong>${poem.title}</strong> — ${poem.author}
+      </a>
+
+      <span class="scroll-icon">📜</span>
+
+      <button class="remove-btn">Remove</button>
     </li>
   `).join("");
 

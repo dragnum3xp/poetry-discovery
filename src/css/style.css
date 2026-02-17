@@ -193,6 +193,102 @@ button {
 
 
 /* =========================
+   Favorite Page Design
+========================= */
+
+.favorite-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.scroll-icon {
+  display: inline-block;
+  cursor: default;
+  transition: transform 0.2s ease;
+}
+
+@keyframes bounce-soft {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-4px); }
+  100% { transform: translateY(0); }
+}
+
+.favorite-item:hover .scroll-icon {
+  animation: bounce-soft 0.4s ease-in-out infinite;
+}
+
+/* =========================
+   Dictionary Page Design
+========================= */
+
+.dic-box {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 3rem;
+  background-color: #efe6d8;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+  font-family: "Times New Roman", serif;
+}
+
+/* Make headings elegant */
+.dic-box h2 {
+  font-family: "Petit Formal Script", cursive;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+/* Definitions */
+.definition-item {
+  margin-bottom: 1rem;
+}
+
+.definition-toggle {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  font-family: inherit;
+}
+
+.definition-toggle:hover {
+  opacity: 0.7;
+}
+
+.definition-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.definition-content.open {
+  max-height: 500px;
+}
+
+.definition-content ul {
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.definition-content li {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+#meaning {
+  font-family: "Petit Formal Script", cursive;
+  line-height: 1.5;
+  font-weight: 400;
+  
+}
+
+
+/* =========================
    Responsive Design
 ========================= */
 
