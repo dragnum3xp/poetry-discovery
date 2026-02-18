@@ -19,7 +19,9 @@ function renderFavorites() {
 
       <span class="scroll-icon">📜</span>
 
-      <button class="remove-btn">Remove</button>
+      <button class="remove-btn" data-title="${poem.title}">
+        Remove
+      </button>
     </li>
   `).join("");
 
